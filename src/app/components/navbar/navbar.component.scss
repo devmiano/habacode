@@ -1,0 +1,18 @@
+@use "../../../styles/base";
+@use "../../../styles/mixins";
+
+.navbar {
+  @include mixins.nav;
+  @include mixins.row-between;
+
+  .nav-brand {
+    @include mixins.navbrand;
+  }
+  .nav-links {
+    @include mixins.row-between;
+    .nav-link {
+      @include mixins.link;
+      margin-left: 1rem;
+    }
+  }
+}

@@ -37,14 +37,14 @@
 
 // Text
 %text-shared {
-  color: base.$ash-800;
+  color: base.$ash-900;
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0.05rem;
 }
 
 %alt-text-shared {
-  color: base.$ash-700;
+  color: base.$ash-800;
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.03rem;
@@ -65,10 +65,7 @@
 %link-shared {
   text-decoration: none;
   cursor: pointer;
-
-  &:active {
-    transform: scale(0.96);
-  }
+  padding: 0.25rem 0;
 }
 // Button
 %btn-shared {
@@ -131,10 +128,10 @@
 
 // App Container
 @mixin app {
-  max-width: 100%;
-  max-height: 100vh;
+  width: 100%;
+  height: 100vh;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 5rem;
   overflow: auto;
 }
 
@@ -152,7 +149,7 @@
   top: 0;
   width: 100%;
   height: 5rem;
-  padding: 0 5rem;
+  padding: 2rem 0;
 }
 
 // Buttons
@@ -185,6 +182,11 @@
 // Link Styles
 @mixin link {
   @extend %alt-text-shared;
+  @extend %link-shared;
+
+  &:hover {
+    border-bottom: 4px solid base.$ash-800;
+  }
 }
 
 @mixin icon {
@@ -198,4 +200,8 @@
   &:hover {
     transform: scale(1.08);
   }
+}
+
+@mixin navbrand {
+  @extend %text-shared;
 }

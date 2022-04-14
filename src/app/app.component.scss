@@ -1,0 +1,7 @@
+@use "../styles/base";
+@use "../styles/mixins";
+
+.app {
+  @include mixins.app;
+  background-color: base.$ash-100;
+}
