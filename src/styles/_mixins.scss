@@ -1,0 +1,201 @@
+@use "base";
+// Media Queries
+
+// Extends
+
+// Typography
+
+// Tiltes
+%title-shared {
+  color: base.$ash-800;
+  font-size: 3.157rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+}
+
+%alt-title-shared {
+  color: base.$ash-800;
+  font-size: 2.369rem;
+  font-weight: 500;
+  letter-spacing: 0.03rem;
+}
+
+// Subtiltes
+%subtitle-shared {
+  color: base.$ash-700;
+  font-size: 1.777rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+}
+
+%alt-subtitle-shared {
+  color: base.$ash-700;
+  font-size: 1.33rem;
+  font-weight: 500;
+  letter-spacing: 0.03rem;
+}
+
+// Text
+%text-shared {
+  color: base.$ash-800;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+}
+
+%alt-text-shared {
+  color: base.$ash-700;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.03rem;
+}
+
+// Input
+%input-shared {
+  outline: none;
+  padding: 0.8rem;
+  border: 2px solid base.$ash-800;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// link
+%link-shared {
+  text-decoration: none;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.96);
+  }
+}
+// Button
+%btn-shared {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid base.$ash-800;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    transform: scale(0.96);
+  }
+}
+
+// Mixins
+
+// Tablet
+@mixin for-tab {
+  @media screen and (min-width: 0px) and(max-width: 768px) {
+    @content;
+  }
+}
+
+// Desktop
+@mixin for-desktop {
+  @media screen and (min-width: 769px) and (max-width: 4000px) {
+    @content;
+  }
+}
+
+// Flex
+
+// Row
+@mixin row-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+// Center
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+// Column
+@mixin col-between {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+// Containers
+
+// App Container
+@mixin app {
+  max-width: 100%;
+  max-height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+  overflow: auto;
+}
+
+// Image Container
+@mixin img-ctr {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+// Navigation Bar
+@mixin nav {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  height: 5rem;
+  padding: 0 5rem;
+}
+
+// Buttons
+@mixin btn {
+  @extend %btn-shared;
+  @extend %text-shared;
+  background-color: transparent;
+  &:hover {
+  }
+}
+
+@mixin btn-alt {
+  @extend %btn-shared;
+  @extend %text-shared;
+  background-color: base.$ash-500;
+  &:hover {
+    border: none;
+  }
+}
+
+//Input Styles
+@mixin input {
+  @extend %text-shared;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// Link Styles
+@mixin link {
+  @extend %alt-text-shared;
+}
+
+@mixin icon {
+  margin: 0.25rem;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    transform: scale(1.08);
+  }
+}
