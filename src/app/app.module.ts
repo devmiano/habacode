@@ -12,9 +12,10 @@ import { NgProgressHttpModule } from 'ngx-progressbar/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-
+import { HeroComponent } from './components/hero/hero.component';
+import { faSearch as fasSearch } from '@fortawesome/free-solid-svg-icons';
 @NgModule({
-  declarations: [AppComponent, NavbarComponent],
+  declarations: [AppComponent, NavbarComponent, HeroComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -29,6 +30,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 })
 export class AppModule {
   constructor(library: FaIconLibrary) {
-    library.addIcons();
+    library.addIcons(fasSearch);
   }
 }

@@ -4,9 +4,13 @@
 .navbar {
   @include mixins.nav;
   @include mixins.row-between;
+  background-color: base.$ash-100;
 
   .nav-brand {
     @include mixins.navbrand;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1.33rem;
   }
   .nav-links {
     @include mixins.row-between;

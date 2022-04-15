@@ -1,0 +1,38 @@
+@use "../../../styles/base";
+@use "../../../styles/mixins";
+
+.hero {
+  @include mixins.col-between;
+  height: auto;
+  padding: 5rem;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: base.$ash-200;
+  border: 4px solid base.$ash-600;
+
+  .header {
+    .hero-title {
+      @include mixins.title;
+    }
+    .hero-subtitle {
+      @include mixins.subtitle;
+    }
+  }
+  .hero-search {
+    margin-top: 2rem;
+    background-color: base.$ash-100;
+    border: 4px solid base.$ash-600;
+    color: base.$ash-700;
+    .search-input {
+      @include mixins.input;
+      width: 24rem;
+      &::placeholder {
+        color: base.$ash-700;
+      }
+    }
+    .search-icon {
+      margin: 1rem;
+      cursor: pointer;
+    }
+  }
+}
