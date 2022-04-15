@@ -176,6 +176,16 @@
   }
 }
 
+@mixin nav-input {
+  @extend %text-shared;
+  @extend %input-shared;
+  padding: 0.3rem 0.5rem;
+
+  &:focus {
+    outline: none;
+  }
+}
+
 // Link Styles
 @mixin link {
   @extend %alt-text-shared;
@@ -183,6 +193,12 @@
 
   &:hover {
     border-bottom: 4px solid base.$ash-800;
+    color: base.$ash-800;
+  }
+
+  &:active {
+    border-bottom: 4px solid base.$ash-900;
+    color: base.$ash-900;
   }
 }
 

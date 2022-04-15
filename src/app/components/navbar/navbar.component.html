@@ -1,7 +1,22 @@
 <nav class="navbar">
-  <div class="nav-brand">habacode</div>
+  <a class="nav-brand" routerLink="home">habacode</a>
   <div class="nav-links">
-    <p class="nav-link">about</p>
-    <p class="nav-link">search</p>
+    <div class="nav-search">
+      <input
+        class="nav-input"
+        type="search"
+        name="search"
+        id="search"
+        placeholder="search..."
+        autocomplete="on"
+      />
+      <fa-icon class="nav-icon" [icon]="['fas', 'search']"></fa-icon>
+    </div>
+    <a class="nav-link" routerLink="/profile" routerLinkActive="active"
+      >profile</a
+    >
+    <a class="nav-link" routerLink="/repository" routerLinkActive="active"
+      >repository</a
+    >
   </div>
 </nav>
