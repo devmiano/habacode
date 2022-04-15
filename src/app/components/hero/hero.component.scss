@@ -4,7 +4,7 @@
 .hero {
   @include mixins.col-between;
   height: auto;
-  padding: 5rem;
+  padding: 4rem;
   justify-content: center;
   align-items: flex-start;
   background-color: base.$ash-200;
@@ -16,6 +16,11 @@
     }
     .hero-subtitle {
       @include mixins.subtitle;
+      line-height: 1.15;
+      .hero-subtitle-span {
+        @include mixins.subtitle;
+        color: base.$ash-900;
+      }
     }
   }
   .hero-search {
@@ -31,8 +36,8 @@
       }
     }
     .search-icon {
-      margin: 1rem;
       cursor: pointer;
+      padding: 0.9rem;
     }
   }
 }

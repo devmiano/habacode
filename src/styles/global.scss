@@ -12,7 +12,7 @@
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 // Remove default margin
@@ -87,19 +87,17 @@ select {
 // Scrollbar styles
 
 ::-webkit-scrollbar {
-  width: 0.5rem;
+  width: 0.4rem;
 }
 
 ::-webkit-scrollbar-track {
-  background: white;
-  margin: 0.5rem;
+  background: base.$ash-100;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: gray;
-  border-radius: 0.2rem;
+  background: base.$ash-600;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: grey;
+  background: base.$ash-900;
 }
