@@ -14,8 +14,9 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { faSearch as fasSearch } from '@fortawesome/free-solid-svg-icons';
+import { UserComponent } from './components/user/user.component';
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HeroComponent],
+  declarations: [AppComponent, NavbarComponent, HeroComponent, UserComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
