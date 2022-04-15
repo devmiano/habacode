@@ -69,7 +69,6 @@
   padding: 0.8rem 1.5rem;
   border: 2px solid base.$ash-800;
   text-decoration: none;
-  text-transform: uppercase;
   cursor: pointer;
 
   &:focus {
@@ -157,10 +156,12 @@
   }
 }
 
-@mixin btn-alt {
+@mixin alt-btn {
   @extend %btn-shared;
   @extend %text-shared;
-  background-color: base.$ash-500;
+  background-color: base.$ash-900;
+  color: base.$ash-100;
+  border: none;
   &:hover {
     border: none;
   }

@@ -16,9 +16,16 @@ import { HeroComponent } from './components/hero/hero.component';
 import { faSearch as fasSearch } from '@fortawesome/free-solid-svg-icons';
 import { UserComponent } from './components/user/user.component';
 import { RepoComponent } from './components/repo/repo.component';
-import { ProfileComponent } from './components/profile/profile.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HeroComponent, UserComponent, RepoComponent, ProfileComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    HeroComponent,
+    UserComponent,
+    RepoComponent,
+    NotFoundComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,0 +1,19 @@
+@use "../../../styles/base";
+@use "../../../styles/mixins";
+
+.nf {
+  @include mixins.center;
+  flex-direction: column;
+  height: 80%;
+
+  .nf-title {
+    @include mixins.title;
+  }
+  .nf-subtitle {
+    @include mixins.subtitle;
+  }
+  .nf-btn {
+    margin-top: 4rem;
+    @include mixins.alt-btn;
+  }
+}
