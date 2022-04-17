@@ -1,0 +1,6 @@
+@use "../../../styles/base";
+@use "../../../styles/mixins";
+
+.btn {
+  @include mixins.alt-btn;
+}

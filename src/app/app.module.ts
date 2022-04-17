@@ -18,6 +18,7 @@ import { UserComponent } from './components/user/user.component';
 import { RepoComponent } from './components/repo/repo.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { ButtonComponent } from './components/button/button.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +28,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     RepoComponent,
     NotFoundComponent,
     ProfileComponent,
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,
