@@ -17,6 +17,7 @@ import { faSearch as fasSearch } from '@fortawesome/free-solid-svg-icons';
 import { UserComponent } from './components/user/user.component';
 import { RepoComponent } from './components/repo/repo.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ProfileComponent } from './components/profile/profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +26,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     UserComponent,
     RepoComponent,
     NotFoundComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

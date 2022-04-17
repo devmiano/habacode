@@ -1,0 +1,8 @@
+@use "../../../styles/base";
+@use "../../../styles/mixins";
+
+.user {
+  @include mixins.row-between;
+  background-color: base.$ash-900;
+  border: 4px solid base.$ash-200;
+}
