@@ -72,36 +72,113 @@
   width: 100%;
   .user {
     @include mixins.row-between;
-    @include mixins.center;
     margin: 5rem 0;
-    padding: 2rem;
     background-color: base.$ash-200;
-    .user-image {
-      height: 7rem;
-      border-radius: 50rem;
-      margin-right: 2rem;
-      padding: 1rem;
-      border: 4px solid base.$ash-600;
-      background-color: base.$ash-100;
+    width: 100%;
+    .user-header {
+      @include mixins.col-between;
+      @include mixins.center;
+      background-color: base.$ash-300;
+      width: 40%;
+      padding: 2rem;
+      .user-image {
+        height: 7rem;
+        border-radius: 50rem;
+        padding: 1rem;
+        border: 4px solid base.$ash-600;
+        background-color: base.$ash-100;
+      }
+      .user-profile {
+        @include mixins.center;
+        width: 100%;
+        .profile-repos {
+          margin: 2rem 1rem;
+          width: 30%;
+          background-color: base.$ash-500;
+          padding: 2rem 1rem;
+          .profile-text {
+            color: base.$ash-960;
+          }
+          .span-repos {
+            color: base.$ash-950;
+            font-size: 1.777rem;
+            font-weight: 800;
+          }
+        }
+        .profile-followers {
+          margin: 2rem 1rem;
+          width: 30%;
+          background-color: base.$ash-500;
+          padding: 2rem 1rem;
+          .profile-text {
+            color: base.$ash-960;
+          }
+          .span-followers {
+            color: base.$ash-950;
+            font-size: 1.777rem;
+            font-weight: 800;
+          }
+        }
+        .profile-following {
+          margin: 2rem 1rem;
+          width: 30%;
+          background-color: base.$ash-500;
+          padding: 2rem 1rem;
+          .profile-text {
+            color: base.$ash-960;
+          }
+          .span-following {
+            color: base.$ash-950;
+            font-size: 1.777rem;
+            font-weight: 800;
+          }
+        }
+      }
     }
+
     .user-content {
       @include mixins.col-between;
+      background-color: base.$ash-500;
+      align-items: flex-start;
+      width: 60%;
+      padding: 2rem;
       .user-name {
         @include mixins.name;
+        color: base.$ash-940;
+        font-size: 1.77rem;
       }
       .user-login {
         @include mixins.login;
+        color: base.$ash-960;
       }
       .user-bio {
         @include mixins.bio;
+        color: base.$ash-940;
+        margin: 1rem 0;
+      }
+      .user-created {
+        @include mixins.bio;
+        color: base.$ash-960;
+      }
+      .user-location {
+        @include mixins.bio;
+        color: base.$ash-960;
+      }
+      .user-email {
+        @include mixins.bio;
+        color: base.$ash-960;
       }
       .user-url {
         @include mixins.url;
+        color: base.$ash-400;
+        background-color: base.$ash-960;
+        padding: 1rem 2rem;
+        margin: 1rem 0;
       }
     }
   }
 
-  .container {
+  .repos {
     width: 100%;
     @include mixins.row-between;
     align-items: flex-start;

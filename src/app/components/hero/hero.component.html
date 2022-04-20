@@ -28,28 +28,46 @@
 
 <div class="user-profile" *ngIf="showData" (toggleBack)="showUserInput($event)">
   <div class="user">
-    <img
-      class="user-image"
-      src="{{ user?.avatar_url }}"
-      alt="{{ user?.name }}"
-    />
+    <div class="user-header">
+      <img
+        class="user-image"
+        src="{{ user?.avatar_url }}"
+        alt="{{ user?.name }}"
+      />
+      <div class="user-profile">
+        <div class="profile-repos">
+          <span class="span-repos">{{ user?.public_repos }}</span>
+          <p class="profile-text">repositories</p>
+        </div>
+        <div class="profile-followers">
+          <span class="span-followers">{{ user?.followers }}</span>
+          <p class="profile-text">followers</p>
+        </div>
+        <div class="profile-following">
+          <span class="span-following">{{ user?.following }}</span>
+          <p class="profile-text">following</p>
+        </div>
+      </div>
+    </div>
+
     <div class="user-content">
       <p class="user-name">{{ user?.name }}</p>
       <p class="user-login">{{ user?.login }}</p>
       <p class="user-bio">{{ user?.bio }}</p>
-      <div class="wrapper">
-        <p class="user-repos">repos: {{ user?.public_repos }}</p>
-        <p class="user-repos">followers: {{ user?.followers }}</p>
-        <p class="user-repos">following: {{ user?.following }}</p>
-      </div>
 
-      <p class="user-repos">joined: {{ user?.created_at | date }}</p>
-      <p class="user-repos">location: {{ user?.location }}</p>
-      <p class="user-repos">email: {{ user?.email }}</p>
-      <a href="{{ user?.html_url }}" class="user-url">profile</a>
+      <p class="user-created">
+        joined <span>{{ user?.created_at | date }}</span>
+      </p>
+      <p class="user-location">
+        location <span>{{ user?.location }}</span>
+      </p>
+      <p class="user-email">
+        email <span>{{ user?.email }}</span>
+      </p>
+      <a href="{{ user?.html_url }}" class="user-url"> github profile</a>
     </div>
   </div>
-  <div class="container">
+  <div class="repos">
     <div class="repo" *ngFor="let repo of repos">
       <div class="repo-content">
         <p class="repo-name">{{ repo?.name }}</p>
