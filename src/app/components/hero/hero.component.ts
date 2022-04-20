@@ -35,8 +35,8 @@ export class HeroComponent implements OnInit {
         data.public_repos,
         data.followers,
         data.following,
-        data.created_at,
-        data.updated_at,
+        (data.created_at = new Date(data.created_at)),
+        (data.updated_at = new Date(data.updated_at)),
         data.location,
         data.email
       );
@@ -47,6 +47,7 @@ export class HeroComponent implements OnInit {
       this.repos.sort((high, low) => {
         return <any>new Date(low.created_at) - <any>new Date(high.created_at);
       });
+      data.created_at = new Date(data.created);
     });
 
     this.showData = true;

@@ -57,7 +57,10 @@
 
       <p class="user-created">
         <fa-icon class="user-icon" [icon]="['fas', 'calendar-day']"></fa-icon>
-        <span>{{ user?.created_at | date }}</span>
+        <span
+          >joined {{ user?.created_at | datePipe | number: "1.0-0" }} days
+          ago</span
+        >
       </p>
       <p class="user-location">
         <fa-icon class="user-icon" [icon]="['fas', 'location-pin']"></fa-icon>
