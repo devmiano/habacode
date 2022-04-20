@@ -6,18 +6,13 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
 export class BackgroundDirective {
   constructor(private elem: ElementRef) {}
 
-  @HostListener('hover') onClicks() {
-    this.divDeco('aqua');
+  @HostListener('click') onClicks() {
+    this.divDeco('#08415c');
   }
-  @HostListener('click') onDoubleClicks() {
-    this.divDeco('black');
-  }
-  @HostListener('window:keydown.enter') onEnter() {
-    this.divDeco('black');
+  @HostListener('dblclick') onDoubleClicks() {
+    this.divDeco('#031b26');
   }
   private divDeco(action: string) {
-    setTimeout(() => {
-      this.elem.nativeElement.style.backgroundColor = action;
-    }, 3000);
+    this.elem.nativeElement.style.backgroundColor = action;
   }
 }
