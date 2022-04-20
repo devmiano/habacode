@@ -8,8 +8,8 @@
 
   .nav-brand {
     @include mixins.navbrand;
-    color: base.$ash-600;
-    background-color: base.$ash-700;
+    color: base.$ash-970;
+    background-color: base.$ash-400;
     text-decoration: none;
     font-weight: 800;
     cursor: pointer;
