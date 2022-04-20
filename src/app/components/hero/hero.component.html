@@ -34,12 +34,15 @@
       alt="{{ user?.name }}"
     />
     <div class="user-content">
-      <p class="user-name">name: {{ user?.name }}</p>
-      <p class="user-login">username: {{ user?.login }}</p>
-      <p class="user-bio">bio: {{ user?.bio }}</p>
-      <p class="user-repos">repos: {{ user?.public_repos }}</p>
-      <p class="user-repos">followers: {{ user?.followers }}</p>
-      <p class="user-repos">following: {{ user?.following }}</p>
+      <p class="user-name">{{ user?.name }}</p>
+      <p class="user-login">{{ user?.login }}</p>
+      <p class="user-bio">{{ user?.bio }}</p>
+      <div class="wrapper">
+        <p class="user-repos">repos: {{ user?.public_repos }}</p>
+        <p class="user-repos">followers: {{ user?.followers }}</p>
+        <p class="user-repos">following: {{ user?.following }}</p>
+      </div>
+
       <p class="user-repos">joined: {{ user?.created_at | date }}</p>
       <p class="user-repos">location: {{ user?.location }}</p>
       <p class="user-repos">email: {{ user?.email }}</p>
@@ -48,16 +51,31 @@
   </div>
   <div class="container">
     <div class="repo" *ngFor="let repo of repos">
-      <img class="repo-image" src="../../../assets/alien.svg" alt="" />
-      <p class="">name: {{ repo?.name }}</p>
-      <p class="">username: {{ repo?.full_name }}</p>
-      <p class="">description: {{ repo?.description }}</p>
-      <a href="{{ repo?.clone_url }}" class="">clone</a>
-      <p class="">created: {{ repo?.created_at | date }}</p>
-      <p class="">updated: {{ repo?.updated_at | date }}</p>
-      <a class="" href="{{ repo?.homepage }}">site</a>
-      <p class="">languages: #{{ repo?.language }}</p>
-      <a class="" href="{{ repo?.html_url }}">repo</a>
+      <div class="repo-content">
+        <p class="repo-name">{{ repo?.name }}</p>
+        <p class="repo-username">{{ repo?.full_name }}</p>
+        <p class="repo-desc">{{ repo?.description }}</p>
+        <div class="repo-dates">
+          <p class="repo-created">
+            created
+            <span class="span-created">{{ repo?.created_at | date }}</span>
+          </p>
+          <p class="repo-updated">
+            updated
+            <span class="span-updated">{{ repo?.updated_at | date }}</span>
+          </p>
+        </div>
+        <p class="repo-lang">{{ "#" + repo?.language }}</p>
+      </div>
+      <div class="repo-cta">
+        <div class="repo-links">
+          <a href="{{ repo?.clone_url }}" class="repo-clone"
+            >clone repository</a
+          >
+          <a class="repo-link" href="{{ repo?.html_url }}">github link</a>
+        </div>
+        <a class="repo-page" href="{{ repo?.homepage }}">live link</a>
+      </div>
     </div>
   </div>
 </div>
