@@ -1,27 +1,54 @@
-# Habacode
+# Habacode | This web app uses the GitHub API to retrieve users and repositories
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+## Author
 
-## Development server
+:link: [Sammy Muchiri](https://github.com/devmiano)
+
+## Project Screenshot
+
+![screenshot](./src/assets/images/habacode.png)
+
+## Installation / Setup instructions
+
+:point_right: Open Terminal {Ctrl+Alt+T}
+
+`git clone https://github.com/devmiano/habacode.git`
+
+- `cd habacode` to enter the project folder
+
+- `code .` or `atom .` based on the text editor you have.
+
+- `yarn` to install necessary dependencies.
+
+## Deploy Locally
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
+## Build for production
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## BDD
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+> The web application will require the user to input a user in our app search engine.
+> The app then retrieves and displays the entered user's profile information and their respective repositories using the GitHub API.
 
-## Running end-to-end tests
+## Technologies used
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- HTML5
+- CSS3
+- Javascript
+- Angular
+- SASS
+- Markdown
+- GitHub API
 
-## Further help
+## License
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+> MIT License :copyright: 2022 Sammy Muchiri.
+
+---
+
+## Collaborate
+
+To collaborate, reach me on :email: [Email](devmiano@gmail.com)
