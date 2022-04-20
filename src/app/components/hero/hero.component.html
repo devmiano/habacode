@@ -56,13 +56,16 @@
       <p class="user-bio">{{ user?.bio }}</p>
 
       <p class="user-created">
-        joined <span>{{ user?.created_at | date }}</span>
+        <fa-icon class="user-icon" [icon]="['fas', 'calendar-day']"></fa-icon>
+        <span>{{ user?.created_at | date }}</span>
       </p>
       <p class="user-location">
-        location <span>{{ user?.location }}</span>
+        <fa-icon class="user-icon" [icon]="['fas', 'location-pin']"></fa-icon>
+        <span>{{ user?.location }}</span>
       </p>
       <p class="user-email">
-        email <span>{{ user?.email }}</span>
+        <fa-icon class="user-icon" [icon]="['fas', 'envelope']"></fa-icon>
+        <span>{{ user?.email }}</span>
       </p>
       <a href="{{ user?.html_url }}" class="user-url"> github profile</a>
     </div>

@@ -91,13 +91,13 @@ select {
 }
 
 ::-webkit-scrollbar-track {
-  background: base.$ash-100;
+  background: base.$ash-900;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: base.$ash-600;
+  background: base.$ash-700;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: base.$ash-900;
+  background: base.$ash-400;
 }

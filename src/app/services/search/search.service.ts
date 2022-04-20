@@ -14,7 +14,7 @@ export class SearchService {
     const headers = {
       'Content-Type': 'application/json',
       Accept: 'application/vnd.github.v3.raw',
-      Authorization: 'token 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',
+      Authorization: `'token' + ${environment.apiKey}`,
     };
 
     return this.http.get(userUrl, { headers: headers });
@@ -28,7 +28,7 @@ export class SearchService {
     const headers = {
       'Content-Type': 'application/json',
       Accept: 'application/vnd.github.v3.raw',
-      Authorization: 'token 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',
+      Authorization: `'token' + ${environment.apiKey}`,
     };
 
     return this.http.get(repoUrl, { headers: headers });

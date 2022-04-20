@@ -14,6 +14,9 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { faSearch as fasSearch } from '@fortawesome/free-solid-svg-icons';
+import { faLocationPin as fasLocation } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarDay as fasCalendar } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope as fasEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { UserComponent } from './components/user/user.component';
 import { RepoComponent } from './components/repo/repo.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
@@ -49,6 +52,6 @@ import { BackgroundDirective } from './directives/background/background.directiv
 })
 export class AppModule {
   constructor(library: FaIconLibrary) {
-    library.addIcons(fasSearch);
+    library.addIcons(fasSearch, fasEnvelope, fasCalendar, fasLocation);
   }
 }
