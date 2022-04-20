@@ -8,10 +8,13 @@
 
   .nav-brand {
     @include mixins.navbrand;
+    color: base.$ash-600;
+    background-color: base.$ash-700;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 800;
     cursor: pointer;
     font-size: 1.33rem;
+    padding: 0.4rem 1rem;
   }
   .nav-links {
     @include mixins.row-between;

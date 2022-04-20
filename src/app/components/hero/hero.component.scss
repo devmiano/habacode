@@ -9,29 +9,27 @@
   justify-content: center;
   align-items: flex-start;
   background-color: base.$ash-100;
-  border-radius: 0.5rem;
 
   .header {
     .hero-title {
       @include mixins.title;
-      color: base.$ash-600;
+      color: base.$ash-400;
       line-height: 1.15;
     }
     .hero-subtitle {
       @include mixins.subtitle;
-      color: base.$ash-500;
+      color: base.$ash-700;
       line-height: 1.15;
       .hero-subtitle-span {
         @include mixins.subtitle;
-        color: base.$ash-600;
+        color: base.$ash-800;
       }
     }
   }
   .hero-search {
     margin-top: 2rem;
-    background-color: base.$ash-200;
-    color: base.$ash-500;
-    border-radius: 0.5rem;
+    background-color: base.$ash-700;
+    color: base.$ash-600;
     width: 100%;
     overflow: hidden;
 
@@ -42,7 +40,7 @@
     }
 
     .search-input {
-      background-color: base.$ash-200;
+      background-color: base.$ash-700;
       float: left;
       @include mixins.input;
       width: 70%;
