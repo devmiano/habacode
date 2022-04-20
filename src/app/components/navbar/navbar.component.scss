@@ -4,7 +4,7 @@
 .navbar {
   @include mixins.nav;
   @include mixins.row-between;
-  background-color: base.$ash-100;
+  background-color: transparent;
 
   .nav-brand {
     @include mixins.navbrand;

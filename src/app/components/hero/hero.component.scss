@@ -4,40 +4,111 @@
 .hero {
   @include mixins.col-between;
   height: auto;
-  padding: 4rem;
+  padding: 3rem;
+  width: fit-content;
   justify-content: center;
   align-items: flex-start;
-  background-color: base.$ash-200;
-  border: 4px solid base.$ash-600;
+  background-color: base.$ash-100;
+  border-radius: 0.5rem;
 
   .header {
     .hero-title {
       @include mixins.title;
+      color: base.$ash-600;
+      line-height: 1.15;
     }
     .hero-subtitle {
       @include mixins.subtitle;
+      color: base.$ash-500;
       line-height: 1.15;
       .hero-subtitle-span {
         @include mixins.subtitle;
-        color: base.$ash-900;
+        color: base.$ash-600;
       }
     }
   }
   .hero-search {
     margin-top: 2rem;
-    background-color: base.$ash-100;
-    border: 4px solid base.$ash-600;
-    color: base.$ash-700;
-    .search-input {
-      @include mixins.input;
-      width: 24rem;
-      &::placeholder {
-        color: base.$ash-700;
-      }
-    }
+    background-color: base.$ash-200;
+    color: base.$ash-500;
+    border-radius: 0.5rem;
+    width: 100%;
+    overflow: hidden;
+
     .search-icon {
       cursor: pointer;
-      padding: 0.9rem;
+      padding: 0.7rem;
+      float: left;
+    }
+
+    .search-input {
+      background-color: base.$ash-200;
+      float: left;
+      @include mixins.input;
+      width: 70%;
+
+      &::placeholder {
+        color: base.$ash-600;
+      }
+    }
+
+    .search-cta {
+      display: flex;
+      align-items: center;
+      float: right;
+      outline: none;
+      border: none;
+      background-color: base.$ash-900;
+      color: base.$ash-700;
+      padding: 0.7rem;
+    }
+  }
+}
+
+.user {
+  @include mixins.row-between;
+  @include mixins.center;
+  margin: 5rem 0;
+  .user-image {
+    height: 13rem;
+    border-radius: 50rem;
+    margin-right: 2rem;
+    padding: 1rem;
+    border: 4px solid base.$ash-600;
+  }
+  .user-content {
+    @include mixins.col-between;
+    .user-name {
+      @include mixins.name;
+    }
+    .user-login {
+      @include mixins.login;
+    }
+    .user-bio {
+      @include mixins.bio;
+    }
+    .user-url {
+      @include mixins.url;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  @include mixins.row-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  .repo {
+    width: 30%;
+    height: auto;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .repo-image {
+      height: 5rem;
     }
   }
 }

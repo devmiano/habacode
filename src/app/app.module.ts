@@ -19,6 +19,9 @@ import { RepoComponent } from './components/repo/repo.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ButtonComponent } from './components/button/button.component';
+import { SearchService } from './services/search/search.service';
+import { DatePipe } from './pipes/date/date.pipe';
+import { BackgroundDirective } from './directives/background/background.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +32,8 @@ import { ButtonComponent } from './components/button/button.component';
     NotFoundComponent,
     ProfileComponent,
     ButtonComponent,
+    DatePipe,
+    BackgroundDirective,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +44,7 @@ import { ButtonComponent } from './components/button/button.component';
     NgProgressModule,
     NgProgressHttpModule,
   ],
-  providers: [],
+  providers: [SearchService],
   bootstrap: [AppComponent],
 })
 export class AppModule {

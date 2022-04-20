@@ -1,4 +1,4 @@
-<div class="hero">
+<div class="hero" *ngIf="showInput">
   <div class="header">
     <h2 class="hero-title">for the lovers of code</h2>
     <p class="hero-subtitle">
@@ -6,16 +6,58 @@
       best <span class="hero-subtitle-span">version control</span> out there
     </p>
   </div>
-  <form class="hero-search">
+  <form
+    class="hero-search"
+    (ngSubmit)="submitUser()"
+    #heroForm="ngForm"
+    name="heroForm"
+  >
+    <fa-icon class="search-icon" [icon]="['fas', 'search']"></fa-icon>
     <input
       class="search-input"
       type="search"
-      name="search"
-      id="search"
+      name="username"
+      id="username"
       placeholder="search users or repositories on github"
-      autocomplete="on"
+      autocomplete="off"
+      [(ngModel)]="username"
     />
-    <fa-icon class="search-icon" [icon]="['fas', 'search']"></fa-icon>
+    <button class="search-cta" type="submit">search</button>
   </form>
 </div>
-<app-profile></app-profile>
+
+<div class="user-profile" *ngIf="showData" (toggleBack)="showUserInput($event)">
+  <div class="user">
+    <img
+      class="user-image"
+      src="{{ user?.avatar_url }}"
+      alt="{{ user?.name }}"
+    />
+    <div class="user-content">
+      <p class="user-name">name: {{ user?.name }}</p>
+      <p class="user-login">username: {{ user?.login }}</p>
+      <p class="user-bio">bio: {{ user?.bio }}</p>
+      <p class="user-repos">repos: {{ user?.public_repos }}</p>
+      <p class="user-repos">followers: {{ user?.followers }}</p>
+      <p class="user-repos">following: {{ user?.following }}</p>
+      <p class="user-repos">joined: {{ user?.created_at | date }}</p>
+      <p class="user-repos">location: {{ user?.location }}</p>
+      <p class="user-repos">email: {{ user?.email }}</p>
+      <a href="{{ user?.html_url }}" class="user-url">profile</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="repo" *ngFor="let repo of repos">
+      <img class="repo-image" src="../../../assets/alien.svg" alt="" />
+      <p class="">name: {{ repo?.name }}</p>
+      <p class="">username: {{ repo?.full_name }}</p>
+      <p class="">description: {{ repo?.description }}</p>
+      <a href="{{ repo?.clone_url }}" class="">clone</a>
+      <p class="">created: {{ repo?.created_at | date }}</p>
+      <p class="">updated: {{ repo?.updated_at | date }}</p>
+      <a class="" href="{{ repo?.homepage }}">site</a>
+      <p class="">languages: #{{ repo?.language }}</p>
+      <a class="" href="{{ repo?.html_url }}">repo</a>
+    </div>
+  </div>
+</div>

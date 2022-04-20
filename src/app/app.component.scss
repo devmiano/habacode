@@ -3,5 +3,6 @@
 
 .app {
   @include mixins.app;
-  background-color: base.$ash-100;
+  @include mixins.img-ctr;
+  background-image: url("../assets/images/habacode.svg");
 }
